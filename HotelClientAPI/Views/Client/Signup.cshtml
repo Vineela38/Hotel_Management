@@ -1,0 +1,85 @@
+@model HotelClientAPI.Models.Entities.SignUp
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<style>
+    h4 {
+        color:yellow; /* Green color */
+        font-family: Arial, sans-serif; /* Font family */
+        text-align: center; /* Center alignment */
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+    <table class="table table-dark table-striped">
+        <tr>
+            <td colspan="3">
+                <h4>Customer Register Form</h4>
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@Html.TextBoxFor(i => i.CustomerName)</td>
+            <td>@Html.ValidationMessageFor(i => i.CustomerName)</td>
+        </tr>
+          <tr>
+            <td>Email</td>
+            <td>@Html.TextBoxFor(i => i.Email)</td>
+            <td>@Html.ValidationMessageFor(i => i.Email)</td>
+        </tr>
+ 
+ 
+        <tr>
+            <td>Password</td>
+            <td>@Html.PasswordFor(i => i.Password)</td>
+        </tr>
+        <tr>
+            <td>ConfirmPassword</td>
+            <td>@Html.PasswordFor(i => i.ConfirmPassword)</td>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td>@Html.TextBoxFor(i => i.DOB, new { type = "date" })</td>
+            <td>@Html.ValidationMessageFor(i => i.DOB)</td>
+        </tr>
+        <tr>
+            <td>MobileNo</td>
+            <td>@Html.TextBoxFor(i => i.MobileNo)</td>
+            <td>@Html.ValidationMessageFor(i => i.MobileNo)</td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>@Html.TextBoxFor(i => i.Country)</td>
+            <td>@Html.ValidationMessageFor(i => i.Country)</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>@Html.TextBoxFor(i => i.City)</td>
+            <td>@Html.ValidationMessageFor(i => i.City)</td>
+        </tr>
+        <tr>
+ 
+            <td>Pincode</td>
+            <td>@Html.TextBoxFor(i => i.Pincode)</td>
+            <td>@Html.ValidationMessageFor(i => i.Pincode)</td>
+        </tr>
+ 
+        
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" value="Submit" />&nbsp;
+             <a href="/Client/Login" class="btn btn-secondary">Cancel</a></td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+
+    @if (TempData["PopUpMessage"] != null)
+    {
+       
+            @TempData["PopUpMessage"]
+       
+    }
+}

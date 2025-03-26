@@ -1,0 +1,30 @@
+@using(Html.BeginForm("getallProjects","HotelClient")){
+    <table>
+        <tr>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+@if(ViewBag.plist!=null){
+    <table>
+        <tr><th>Hotel ID</th><th>Hotel Name</th><th>Hotel Description</th><th>Area</th><th>State</th><th>City</th><th>Country</th><th>No of AC Rooms</th><th>Cost per Day</th><th>NO of Non AC Rooms</th><th>Cost per Day Non AC</th></tr>
+        @foreach(var p in ViewBag.plist){
+            <tr>
+                <td>@p.hotelId</td>
+                <td>@p.hotelName</td>
+                <td>@p.description</td>
+                <td>@p.area</td>
+                <td>@p.state</td>
+                <td>@p.city</td>
+                <td>@p.country</td>
+                <td>@p.noOfACRooms</td>
+                <td>@p.costPerDay</td>
+                <td>@p.noOfNonACRooms</td>
+                <td>@p.costPerDayNonAc</td>
+            </tr>
+        }
+    </table>
+}
+@if(ViewBag.plist!=null){
+    @ViewBag.plist
+}  
+}

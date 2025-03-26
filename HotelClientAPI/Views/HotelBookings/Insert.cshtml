@@ -1,0 +1,210 @@
+@model HotelClientAPI.Models.Entities.HotelBooking
+<script>
+    $(document).ready(function () {
+    $('form').on('submit', function () {
+        var arrivalDate = new Date($('#arrivalDate').val());
+        var departureDate = new Date($('#departureDate').val());
+        var today = new Date();
+        today.setHours(0, 0, 0, 0); // Ensure today's date is time-independent
+
+        if (arrivalDate < today) {
+            alert('Arrival date cannot be earlier than today.');
+            return false;
+        }
+
+        if (departureDate <= arrivalDate) {
+            alert('Departure date must be later than the arrival date.');
+            return false;
+        }
+
+        $("#Payment").show();
+        return true; // Allow form submission
+    });
+    });
+
+      function calculatenodays() {
+    var arrivalDate = new Date(document.getElementById("arrivalDate").value);
+    var departureDate = new Date(document.getElementById("departureDate").value);
+    var today = new Date();
+    today.setHours(0, 0, 0, 0); // Ensure today's date is time-independent
+
+    if (arrivalDate < today) {
+        alert("Arrival date must be after the current date.");
+        document.getElementById("arrivalDate").value = "";
+        return;
+    }
+    if (departureDate <= arrivalDate) {
+        alert("Departure date must be after the arrival date.");
+        document.getElementById("departureDate").value = "";
+        return;
+    }
+    var noOfDays = Math.ceil((departureDate - arrivalDate) / (1000 * 60 * 60 * 24));
+    if (noOfDays > 7) {
+        alert("The maximum stay duration is 7 nights.");
+        document.getElementById("departureDate").value = "";
+        return;
+    }
+    document.getElementById("noOfDays").value = noOfDays;
+}
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var noOfAdults = document.querySelector('input[name="noOfAdults"]');
+        var noOfchild = document.querySelector('input[name="noOfchild"]');
+        var noOfDays = document.querySelector('input[name="noOfDays"]');
+        if (noOfAdults && noOfchild && noOfDays) {
+
+            noOfAdults.value = '';
+            noOfchild.value = '';
+            noOfDays.value = '';
+        }
+    });
+</script>
+
+@using (Html.BeginForm("insertpayment","PaymentClients"))
+{
+    <style>
+    body {
+        background-color: #f5f5f5; 
+        margin: 0;
+        padding: 0;
+    }
+    
+    table {
+        width: 25%;   
+        margin-top: 100px;
+        margin-left: 50px;
+        background-color: #ffffff; 
+        padding: 15px; 
+        border-radius: 8px; 
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+    }
+
+    td {
+        padding: 3px;
+        color: #555555;
+        font-weight: bold;
+    }
+
+    .form-control {
+        background-color: #e9f0f5; 
+        border: 1px solid #007bff; 
+        color: #333333; 
+        padding: 6px; 
+        border-radius: 4px; 
+    }
+
+    .form-control:focus {
+        background-color: #ffffff; 
+        border-color: #007bff;
+        color: #000000; 
+    }
+
+    .T1 {
+        color: #ff0000; 
+    }
+
+    select.form-control {
+        background-color: #e9f0f5; 
+        color: #333333; 
+    }
+
+    input[type="submit"] {
+        background-color: #28a745;
+        color: #ffffff; 
+        border: none;
+        padding: 8px 16px; 
+        cursor: pointer;
+        border-radius: 4px; 
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #218838;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #f2f2f2; 
+    }
+    </style>
+
+    <table>
+        <tr>
+            <td>HotelId</td>
+            <td>@Html.TextBoxFor(p => p.hotelId, new { @class = "form-control" })</td>
+        </tr>
+        <tr>
+            <td>EmailId</td>
+            <td>@Html.TextBoxFor(p => p.emailID, new { @class = "form-control" })</td>
+            <td>@Html.ValidationMessageFor(p => p.emailID)</td>
+        </tr>
+        <tr>
+            <td>BookingDate</td>
+            <td>
+                <input type="text" value="@ViewBag.FormattedBookingDate" readonly="readonly" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td>Arrival Date</td>
+            <td>@Html.TextBoxFor(p => p.arrivalDate, new
+                    {
+                        type = "date",
+                        id = "arrivalDate",
+                        @onchange = "calculatenodays()",
+                        @class="form-control"
+                    })
+            </td>
+        </tr>
+        <tr>
+            <td>Departure Date</td>
+            <td>@Html.TextBoxFor(p => p.departureDate, new
+            {
+            type = "date",
+            id = "departureDate",
+            @onchange = "calculatenodays()",
+            @class = "form-control"
+            })
+            </td>
+        </tr>
+        <tr>
+            <td>No of Adults</td>
+            <td>@Html.TextBoxFor(p => p.noOfAdults, new { @class = "form-control" })</td>
+            <td>@Html.ValidationMessageFor(p => p.noOfAdults)</td>
+        </tr>
+        <tr>
+            <td>No of Children</td>
+            <td>@Html.TextBoxFor(p => p.noOfchild, new { @class = "form-control" })</td>
+            <td>@Html.ValidationMessageFor(p => p.noOfchild)</td>
+        </tr>
+        <tr>
+            <td>No of Days</td>
+            <td>@Html.TextBoxFor(p => p.noOfDays)</td>
+            <td>@Html.ValidationMessageFor(p => p.noOfDays)</td>
+        </tr>
+        <tr>
+            <td>Room Type</td>
+            <td>
+                @Html.DropDownListFor(m => m.roomType,
+                         new List<SelectListItem>
+            {
+            new SelectListItem { Text = "AC", Value = "AC" },
+            new SelectListItem { Text = "Non AC", Value = "Non AC" },
+            }, "Select RoomType", new { @class = "form-control" })
+            </td>
+            <td>@Html.ValidationMessageFor(m => m.roomType, "", new { @class = "T1" })</td>
+        </tr>
+        <tr>
+                <td>
+                    <input type="button" id="Proceed" value="Proceed Payment">
+                    @* <input type="button" value="Cancel" onclick="window.history.back();"> *@
+                </td>
+            </tr>
+    </table>
+
+    @if (ViewBag.Msg != null)
+    {
+        <div style="color: green;">@ViewBag.Msg</div>
+    }
+}

@@ -1,0 +1,172 @@
+@model HotelClientAPI.Models.Entities.HotelPayment
+@using(Html.BeginForm()){
+   <script>
+document.addEventListener("DOMContentLoaded", function() {
+    @* const input = document.querySelector('.expiry-date-input'); *@
+
+    @* input.addEventListener('input', function() {
+        let value = input.value.replace(/\D/g, ''); // Remove non-digit characters
+        if (value.length > 2) {
+            value = value.slice(0, 2) + '/' + value.slice(2, 4); // Format MM/YY
+        }
+        input.value = value;
+    });
+
+    input.addEventListener('blur', function() {
+        let value = input.value.replace(/\D/g, '');
+        if (value.length !== 4) {
+            input.value = ''; // Clear if the format is not MM/YY
+            alert('Please enter the expiry date in MM/YY format.');
+        }
+    }); *@
+
+    var Creditcardnumber = document.querySelector('input[name="Creditcardnumber"]');
+        var Cvv=document.querySelector('input[name="Cvv"]')
+        var Pin=document.querySelector('input[name="Pin"]')
+        if (Creditcardnumber&&Cvv&&Pin) {
+            Creditcardnumber.value = '';
+            Cvv.value='';
+            Pin.value='';// Clear the value
+        }
+});
+</script>
+@* <script>
+    function fetch(){
+        var h=document.getElementById("bankname").value;
+        window.location.href="/HotelPayment/fetch/"+h;
+    }
+</script> *@
+        <style>
+        .expiry-date-input {
+        width: 100px;
+        padding: 5px;
+        box-sizing: border-box;
+        }
+        </style>
+        <style>
+        /* General styles */
+        body {
+            background-color: #1b1919; /* Background color of the page */
+        }
+       
+        table {
+            width: 20%;
+            margin: 0px 630;
+            background-color: hsl(0, 0%, 10%); /* Table background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+ 
+        td {
+            padding: 5px;
+            color: #f4efef; /* Default text color */
+            font-weight: bold;
+        }
+ 
+        /* Input field styles */
+        .form-control {
+            background-color: #19191a; /* Light blue background color */
+            border: 1px solid #007bff; /* Blue border color */
+            color: #333333; /* Input text color */
+            padding: 10px;
+            border-radius: 5px;
+        }
+ 
+        /* Input field focus styles */
+        .form-control:focus {
+            background-color: #212020; /* White background color on focus */
+            border-color: #007bff; /* Darker blue border color on focus */
+            color: #000000; /* Darker text color on focus */
+        }
+ 
+        /* Validation message styles */
+        .T1 {
+            color: #ff0000; /* Red color for validation messages */
+        }
+ 
+        /* Dropdown styles */
+        select.form-control {
+            background-color: #e9f0f5; /* Same as input background color */
+            color: #333333; /* Text color in dropdown */
+        }
+ 
+        /* Submit button styles */
+        input[type="submit"] {
+            background-color: #28a745; /* Green background color */
+            color: rgb(19, 19, 19); /* White text color */
+            border: none; /* Remove border */
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+ 
+        /* Submit button hover styles */
+        input[type="submit"]:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+ 
+        /* Table row background */
+        tr:nth-child(odd) {
+            background-color: #211f1f; /* Light gray background for odd rows */
+        }
+    </style>
+    <table>
+        <tr>
+            <td>Bank Name</td>
+            <td>@Html.DropDownListFor(m => m.Bankname,
+                         new List<SelectListItem>
+            {
+            new SelectListItem{ Text="Kotak Mahindra Bank", Value="Kotak Mahindra Bank" },
+            new SelectListItem{ Text="HDFC", Value="HDFC" },
+            new SelectListItem{ Text="SBI", Value="SBI" }
+            }, "Select")</td>
+            <td>@Html.ValidationMessageFor(m => m.Bankname, "", new { @class = "T" })</td>
+        </tr>
+
+        <tr>
+            <td>Credit/Debit CardNumber</td>
+            <td>@Html.TextBoxFor(x=>x.Creditcardnumber)</td>
+            <td>@Html.ValidationMessageFor(m=>m.Creditcardnumber,"",new{@class="T1"})</td>
+        </tr>
+        <tr>
+            <td>CardTYPE</td>
+            <td>@Html.TextBoxFor(x=>x.Cardtype)</td>
+            <td>@Html.ValidationMessageFor(m=>m.Cardtype,"",new{@class="T1"})</td>
+        </tr>
+        <tr>
+            <td>Card Holder Name</td>
+            <td>@Html.TextBoxFor(x=>x.Nameoncard)</td>
+            <td>@Html.ValidationMessageFor(m=>m.Nameoncard,"",new{@class="T1"})</td>
+        </tr>
+        <tr>
+           <td>@Html.LabelFor(m => m.Expirydate)</td>
+            <td>@Html.TextBoxFor(m => m.Expirydate, new { @type="Month"})</td>
+            <td>@Html.ValidationMessageFor(m => m.Expirydate,"",new{ @class = "T" })</td> 
+        </tr>
+            
+        <tr>
+            <td>CVV</td>
+            <td>@Html.TextBoxFor(x=>x.Cvv)</td>
+            <td>@Html.ValidationMessageFor(m=>m.Cvv,"",new{@class="T1"})</td>
+        </tr>
+        <tr>
+            <td>Pin</td>
+            <td>@Html.TextBoxFor(x=>x.Pin)</td>
+            <td>@Html.ValidationMessageFor(m=>m.Pin,"",new{@class="T1"})</td>
+        </tr>
+        <tr>
+                    <td>
+                        <input type="submit" value="Make Payment">
+                        @* <input type="button" value="Cancel Payment" onclick="window.history.back();"> *@
+                    </td>
+                </tr>
+    </table>
+    @if(ViewBag.msg!=null){
+        <div style="color: red; font-weight: bold; margin-top: 20px;background-color: white;">
+        @ViewBag.msg
+        </div>
+    }
+}

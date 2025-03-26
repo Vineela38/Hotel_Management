@@ -1,0 +1,333 @@
+@model HotelClientAPI.Models.Entities.BookingProccesing
+@{
+    ViewData["Model"] = new HotelClientAPI.Models.Entities.BookingProccesing();
+    var hotelName = ViewBag.hotelName as string;
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet" />
+ 
+<script>
+    $(document).ready(function () {
+        $("#Booking").show();
+        $("#Payment").hide();
+        $("#Proceed").click(function(){
+           $("#Booking").hide();
+            $("#Payment").show(); 
+        });
+    $('form').on('submit', function () {
+        var arrivalDate = new Date($('#arrivalDate').val());
+        var departureDate = new Date($('#departureDate').val());
+        var today = new Date();
+        today.setHours(0, 0, 0, 0); // Ensure today's date is time-independent
+
+        if (arrivalDate < today) {
+            alert('Arrival date cannot be earlier than today.');
+            return false;
+        }
+
+        if (departureDate <= arrivalDate) {
+            alert('Departure date must be later than the arrival date.');
+            return false;
+        }
+
+        
+        return true; // Allow form submission
+    });
+    });
+
+    function calculatenodays() {
+    var arrivalDate = new Date(document.getElementById("arrivalDate").value);
+    var departureDate = new Date(document.getElementById("departureDate").value);
+    document.getElementById("arrivalDate").addEventListener("change", calculatenodays);
+    document.getElementById("departureDate").addEventListener("change", calculatenodays);
+    var today = new Date();
+    today.setHours(0, 0, 0, 0); // Ensure today's date is time-independent
+
+    if (arrivalDate < today) {
+        alert("Arrival date must be on or after the current date.");
+        document.getElementById("arrivalDate").value = "";
+        return;
+    }
+
+    if (departureDate <= arrivalDate) {
+        alert("Departure date must be after the arrival date.");
+        document.getElementById("departureDate").value = "";
+        return;
+    }
+
+     var noOfDays = Math.ceil((departureDate - arrivalDate) / (1000 * 60 * 60 * 24));
+    if (noOfDays > 30|| noOfDays>31) {
+        alert("The maximum stay duration is 30/31 days.");
+        document.getElementById("departureDate").value = "";
+        document.getElementById("noOfDays").value = "";
+        return;
+    } 
+    document.getElementById("noOfDays").value = noOfDays;
+    //clearing values
+    document.addEventListener('DOMContentLoaded', function() {
+    var noOfAdults = document.querySelector('input[name="noOfAdults"]');
+    var noOfChild = document.querySelector('input[name="noOfchild"]');
+    var noOfDays = document.querySelector('input[name="noOfDays"]');
+    var clearButton = document.getElementById('clearButton');
+
+    if (noOfAdults && noOfChild && noOfDays) {
+        clearButton.addEventListener('click', function() {
+            noOfAdults.value = '';
+            noOfChild.value = '';
+            noOfDays.value = ''; // Clear the values
+        });
+    }
+});
+}
+
+</script>
+ 
+@using (Html.BeginForm())
+{
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+ 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+ 
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+ 
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+ 
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+ 
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+ 
+        td input[type="button"],
+        td input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+ 
+        td input[type="button"]:hover,
+        td input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+ 
+        td input[type="text"],
+        td select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+ 
+        #Payment {
+            background-color: #e2f1f8;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+ 
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+ 
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+    <div id="Booking">
+        <table class="table table-dark table-striped">
+            <strong>
+                <h1 align="center" style="color: blue;">Hotel Booking Form</h1>
+            </strong>
+            <tr>
+                <td>Hotel Name</td>
+                <td>@Html.TextBox("hotelName", hotelName, new { @readonly = "readonly", id = "hotelName" })</td>
+                <td>@Html.HiddenFor(x => x.hotelBooking.hotelId)</td>
+                <td>@Html.ValidationMessageFor(p => p.hotelBooking.hotelId)</td>
+            </tr>
+            <tr>
+                <td>Email Id</td>
+                <td>@Html.TextBoxFor(x => x.hotelBooking.emailID, new { value = "emailID", id = "emailID" })</td>
+                <td>@Html.ValidationMessageFor(p => p.hotelBooking.emailID)</td>
+            </tr>
+            <tr>
+                <td>Booking Date</td>
+                <td>@Html.TextBoxFor(p=>p.hotelBooking.bookingDate, DateTime.Now.ToString("dd-MM-yyyy"))</td>
+                @* <td><input type="text" value="@ViewBag.FormattedBookingDate" readonly="readonly" class="form-control" /></td> *@
+                @* <td class="error-message">@Html.ValidationMessageFor(x => x.hotelBooking.bookingDate)</td> *@
+                <td>@Html.ValidationMessageFor(p => p.hotelBooking.bookingDate)</td>
+            </tr>
+            <tr>
+                <td>Arrival Date</td>
+                <td>@Html.TextBoxFor(p => p.hotelBooking.arrivalDate, new
+                    {
+                        type = "date",
+                        id = "arrivalDate",
+                        @onchange = "calculatenodays()",
+                        @class="form-control"
+                    })
+                </td>
+                
+                @* <td>@Html.TextBoxFor(x => x.hotelBooking.arrivalDate, new { type = "date", id = "arrivalDate" })</td> *@
+                @* <td class="error-message">@Html.ValidationMessageFor(x => x.hotelBooking.arrivalDate)</td> *@
+            </tr>
+            <tr>
+                <td>Departure Date</td>
+                <td>@Html.TextBoxFor(p => p.hotelBooking.departureDate, new
+                {
+                type = "date",
+                id = "departureDate",
+                @onchange = "calculatenodays()",
+                @class = "form-control"
+                })
+            </td>
+                @* <td>@Html.TextBoxFor(x => x.hotelBooking.departureDate, new { type = "date", id = "departureDate" }) 
+                </td>
+                 <td class="error-message">@Html.ValidationMessageFor(x => x.hotelBooking.departureDate)</td> *@
+            </tr>
+            <tr>
+                <td>Number of Adults</td>
+                <td>@Html.TextBoxFor(x => x.hotelBooking.noOfAdults)</td>
+                <td>@Html.ValidationMessageFor(p => p.hotelBooking.noOfAdults)</td>
+            </tr>
+            <tr>
+                <td>Number of Children</td>
+                <td>@Html.TextBoxFor(x => x.hotelBooking.noOfchild)</td>
+                <td>@Html.ValidationMessageFor(p => p.hotelBooking.noOfchild)</td>
+            </tr>
+            <tr>
+                <td>Number of Days</td>
+            <td>@Html.TextBoxFor(x => x.hotelBooking.noOfDays, new { @id = "noOfDays", @readonly = "readonly" })</td>
+            <td>@Html.ValidationMessageFor(p => p.hotelBooking.noOfDays)</td>
+            </tr>
+            <tr>
+                <td>Room Type</td>
+                <td>@Html.DropDownListFor(x => x.hotelBooking.roomType, new List<SelectListItem>
+                {
+                new SelectListItem{Value = "AC", Text = "AC"},
+                new SelectListItem{Value = "Non-AC", Text = "Non-AC"}
+                }, "Select", new { @class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(m => m.hotelBooking.roomType, "", new { @class = "T1" })</td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="Price" value="Total Price" formaction="GetCalculation"></td>
+                <strong>
+                    <td>Total Price:@ViewBag.TotalPrice</td>
+                </strong>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" id="Proceed" value="Proceed Payment">
+                    <input type="button" value="Cancel" onclick="window.history.back();">
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div id="Payment">
+        <table>
+        <tr>
+            <td>Bank Name</td>
+            <td>@Html.DropDownListFor(m => m.hotelPayment.Bankname,
+                         new List<SelectListItem>
+            {
+            new SelectListItem{ Text="Kotak Mahindra Bank", Value="Kotak Mahindra Bank" },
+            new SelectListItem{ Text="HDFC", Value="HDFC" },
+            new SelectListItem{ Text="SBI", Value="SBI" },
+            new SelectListItem{ Text="ICICI", Value="ICICI" },
+            new SelectListItem{ Text="INDIAN", Value="INDIAN" },
+            new SelectListItem{ Text="INDIAN OVER SEAS", Value="INDIAN OVER SEAS" },
+            new SelectListItem{ Text="ANDHRA BANK", Value="ANDHRA BANK" },
+            new SelectListItem{ Text="RBI", Value="RBI" },
+            new SelectListItem{ Text="BANK OF BARODA", Value="BANK OF BARODA" },
+            new SelectListItem{ Text="UNION BANK", Value="UNION BANK" },
+            new SelectListItem{ Text="CANARA BANK", Value="CANARA BANK" },
+            new SelectListItem{ Text="AXIS BANK", Value="AXIS BANK" },
+            new SelectListItem{ Text="IDBI", Value="IDBI" }
+            }, "Select")</td>
+            <td>@Html.ValidationMessageFor(m => m.hotelPayment.Bankname, "", new { @class = "T" })</td>
+        </tr>
+
+        <tr>
+            <td>Credit/Debit CardNumber</td>
+            <td>@Html.TextBoxFor(x=>x.hotelPayment.Creditcardnumber)</td>
+            <td>@Html.ValidationMessageFor(m=>m.hotelPayment.Creditcardnumber,"",new{@class="T1"})</td>
+        </tr>
+        <tr>
+            <td>CardTYPE</td>
+            <td>@Html.DropDownListFor(m => m.hotelPayment.Cardtype,
+                         new List<SelectListItem>
+            {
+            new SelectListItem{ Text="Visa", Value="Visa" },
+            new SelectListItem{ Text="Rupay", Value="Rupay" },
+            new SelectListItem{ Text="Master Card", Value="Master Card" }
+            }, "Select")</td>
+            <td>@Html.ValidationMessageFor(m=>m.hotelPayment.Cardtype,"",new{@class="T1"})</td>
+        </tr>
+        <tr>
+            <td>Card Holder Name</td>
+            <td>@Html.TextBoxFor(x=>x.hotelPayment.Nameoncard)</td>
+            <td>@Html.ValidationMessageFor(m=>m.hotelPayment.Nameoncard,"",new{@class="T1"})</td>
+        </tr>
+        <tr>
+           <td>@Html.LabelFor(m => m.hotelPayment.Expirydate)</td>
+            <td>@Html.TextBoxFor(m => m.hotelPayment.Expirydate, new { @type="Month"})</td>
+            <td>@Html.ValidationMessageFor(m => m.hotelPayment.Expirydate)</td> 
+        </tr>
+            
+        <tr>
+            <td>CVV</td>
+            <td>@Html.TextBoxFor(x=>x.hotelPayment.Cvv)</td>
+            <td>@Html.ValidationMessageFor(m=>m.hotelPayment.Cvv,"",new{@class="T1"})</td>
+        </tr>
+        <tr>
+            <td>Pin</td>
+            <td>@Html.TextBoxFor(x=>x.hotelPayment.Pin)</td>
+            <td>@Html.ValidationMessageFor(m=>m.hotelPayment.Pin,"",new{@class="T1"})</td>
+        </tr>
+        <tr>
+                    <td>
+                        <input type="submit" value="Make Payment" formaction="/HotelBookings/insertDetails">
+                        @* <input type="button" value="Cancel Payment" onclick="window.history.back();"> *@
+                    </td>
+                </tr>
+    </table>
+    </div>
+ 
+    @if (ViewBag.msg != null)
+    {
+    <div style="color: red; font-weight: bold; margin-top: 20px; background-color: white;">
+        @ViewBag.msg
+    </div>
+    }
+}

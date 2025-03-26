@@ -1,0 +1,133 @@
+@model HotelClientAPI.Models.Entities.Hotel
+<script>
+    function fetch(){
+        var h=document.getElementById("hotelId").value;
+        window.location.href="/HotelClient/fetchid/"+h;
+    }
+</script>
+@using(Html.BeginForm("Delete","HotelClient"))
+{
+    <style>
+        /* General styles */
+        body {
+            background-color: #1b1919; /* Background color of the page */
+        }
+       
+        table {
+            width: 20%;
+            margin: 0px 630;
+            background-color: hsl(0, 0%, 10%); /* Table background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+ 
+        td {
+            padding: 5px;
+            color: #f4efef; /* Default text color */
+            font-weight: bold;
+        }
+ 
+        /* Input field styles */
+        .form-control {
+            background-color: #19191a; /* Light blue background color */
+            border: 1px solid #007bff; /* Blue border color */
+            color: #333333; /* Input text color */
+            padding: 10px;
+            border-radius: 5px;
+        }
+ 
+        /* Input field focus styles */
+        .form-control:focus {
+            background-color: #212020; /* White background color on focus */
+            border-color: #007bff; /* Darker blue border color on focus */
+            color: #000000; /* Darker text color on focus */
+        }
+ 
+        /* Validation message styles */
+        .T1 {
+            color: #ff0000; /* Red color for validation messages */
+        }
+ 
+        /* Dropdown styles */
+        select.form-control {
+            background-color: #e9f0f5; /* Same as input background color */
+            color: #333333; /* Text color in dropdown */
+        }
+ 
+        /* Submit button styles */
+        input[type="submit"] {
+            background-color: #28a745; /* Green background color */
+            color: rgb(19, 19, 19); /* White text color */
+            border: none; /* Remove border */
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+ 
+        /* Submit button hover styles */
+        input[type="submit"]:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+ 
+        /* Table row background */
+        tr:nth-child(odd) {
+            background-color: #211f1f; /* Light gray background for odd rows */
+        }
+    </style>
+   <table class="Delete">
+        <tr>
+         <td>Hotel ID</td>
+        <td>@Html.DropDownListFor(p=>p.hotelId,new SelectList(ViewBag.hotels,"hotelId","hotelId"),"Select",new{onblur="fetch()"})</td>   
+        </tr>
+        <tr>
+            <td>Hotel Name</td>
+            <td>@Html.TextBoxFor(m=>m.hotelName)</td>
+        </tr>
+        <tr>
+            <td>Hotel Description</td>
+            <td>@Html.TextBoxFor(m=>m.description)</td>
+        </tr>
+        <tr>
+            <td>Area</td>
+            <td>@Html.TextBoxFor(m=>m.area)</td>
+        </tr>
+        <tr>
+            <td>State</td>
+            <td>@Html.TextBoxFor(m=>m.state)</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>@Html.TextBoxFor(m=>m.city)</td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>@Html.TextBoxFor(m=>m.country)</td>
+        </tr>
+        <tr>
+            <td>No of AC Rooms</td>
+            <td>@Html.TextBoxFor(m=>m.noOfACRooms)</td>
+        </tr>
+        <tr>
+            <td>Cost Per Day</td>
+            <td>@Html.TextBoxFor(m=>m.costPerDay)</td>
+        </tr>
+        <tr>
+            <td>No of Non-AC Rooms</td>
+            <td>@Html.TextBoxFor(m=>m.noOfNonACRooms)</td>
+        </tr>
+        <tr>
+            <td>Cost Per Day Non-AC</td>
+            <td>@Html.TextBoxFor(m=>m.costPerDayNonAc)</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Delete" style="background-color: aqua;"></td>
+        </tr>
+   </table>
+   @if(ViewBag.msg!=null){
+    @ViewBag.msg
+   }
+}
+ 

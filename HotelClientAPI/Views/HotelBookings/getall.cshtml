@@ -1,0 +1,29 @@
+@using(Html.BeginForm("getallHotelBookinooking","HotelBookingClient")){
+    <table>
+        <tr>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+@if(ViewBag.plist!=null){
+    <table>
+        <tr><th>Booking ID</th><th>Hotel ID</th><th>Email ID</th><th>BookingDate</th><th>ArrivalDate</th><th>DepartureDate</th><th>NoofAdults</th><th>No of Child</th><th>No of Days</th><th> RoomType</th></tr>
+        @foreach(var p in ViewBag.plist){
+            <tr>
+                <td>@p.bookingId</td>
+                <td>@p.hotelId</td>
+                <td>@p.emailID</td>
+                <td>@p.bookingDate</td>
+                <td>@p.arrivalDate</td>
+                <td>@p.departureDate</td>
+                <td>@p.noOfAdults</td>
+                <td>@p.noOfchild</td>
+                <td>@p.noOfDays</td>
+                <td>@p.roomType</td>
+            </tr>
+        }
+    </table>
+}
+@if(ViewBag.plist!=null){
+    @ViewBag.plist
+}  
+}

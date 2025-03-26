@@ -1,0 +1,41 @@
+@model HotelClientAPI.Models.Entities.Login
+
+@using (Html.BeginForm())
+{
+   
+      <table>
+        <tr>
+            <td>Email</td>
+            <td>@Html.TextBoxFor(i => i.Email, new { @class = "form-control",placeholder = "Enter Email",required="required" })</td>
+            <td>@Html.ValidationMessageFor(m => m.Email)</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>@Html.PasswordFor(i => i.Password, new { @class = "form-control",placeholder = "Enter Password",required="required" })</td>
+            <td>@Html.ValidationMessageFor(m => m.Password)</td>
+        </tr>
+        
+        <tr>
+            <td><input type="submit"></td>
+            @* <td>&nbsp;</td> *@
+            <td><a href="/Client/ForgotPassword">Forgot Password?</a></td>
+
+        </tr>
+     
+           
+        <div class="signup-link">
+            <h5> If you're new here,please click on signup</h5>
+            <a href="/Client/Signup">Signup</a>
+        </div>
+
+         </table>
+
+
+        if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
+    
+}

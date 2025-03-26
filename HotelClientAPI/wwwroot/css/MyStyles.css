@@ -1,0 +1,197 @@
+/************************************************************************/
+  /* Ensure no margin/padding issues */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding-top: 95px; /* Add padding to account for the fixed header height */
+  }
+   
+  /* Header styling with fixed position */
+  header {
+    background-color: brown; /* Primary color */
+    color: #f8f9fa;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure header stays above other content */
+  }
+   
+  /* Center text alignment for header */
+  .text-center {
+    text-align: center !important;
+  }
+   
+  .text-red {
+    color: yellow;
+  }
+   
+  .text-left {
+    text-align: left !important;
+  }
+   
+  /* Styling for header h1 */
+  header .text-center h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  }
+   
+  /* Fixed image container and styling */
+  .fixed-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    z-index: -1;
+  }
+   
+  .fixed-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+   
+  /* Content styling */
+  .content-container {
+    position: relative;
+    z-index: 1;
+    margin-left: 20px; /* Ensure content starts below the header */
+    padding-left: 20px;
+    padding-top: 20px;
+   
+   
+    /* Ensure there is space at the top */
+  }
+   
+  /* Image scroll container styling */
+  .image-scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0; /* Adjust padding as needed */
+  }
+   
+  .image-scroll-wrapper {
+    display: inline-block;
+    align-items: center;
+  }
+   
+  .image-scroll-wrapper img {
+    width: 700px;
+    height: 900px;
+    margin-right: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+   
+  .image-scroll-wrapper img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+   
+  @media (max-width: 1200px) {
+    .image-scroll-wrapper img {
+      width: 250px;
+    }
+  }
+   
+  @media (max-width: 768px) {
+    .image-scroll-wrapper img {
+      width: 200px;
+    }
+  }
+   
+  /* Form styling */
+  .Forms {
+    background-color: #5F9EA0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin-left: 150px; /* Center the form */
+    margin-top: 20px; /* Adjust top margin as needed */
+  }
+   
+  /* Button styles */
+  /* .btn-primary {
+    color: rgb(17, 16, 16);
+    background-color: transparent;
+    border-color: transparent;
+  } */
+  .btn-primary {
+    color: white;
+    background-color: blue;
+    border-color: transparent;
+}
+   
+  .btn-primary:hover {
+    color: red;
+    background-color: whitesmoke;
+    border-color: transparent;
+  }
+   
+  a.btn-light {
+    color: whitesmoke;
+    background-color: black;
+    border: 1px solid transparent;
+  }
+   
+  a.btn-light:hover {
+    color: #212529;
+    background-color: white;
+    border-color: #333;
+  }
+   
+  a.btn-primary:hover {
+    color: black;
+    background-color: white;
+    border-color: transparent;
+  }
+   
+  /* Additional styling */
+  .bg-primary {
+    background-color: #5F9EA0 !important;
+  }
+   
+  table td {
+    padding: 5px !important;
+    text-align: left;
+  }
+   
+  .signup-link {
+    margin-top: 10px; /* Adds space above the signup link */
+    text-align: center; /* Centers the link */
+  }
+   
+  .signup-link a {
+    color: red;
+    text-decoration: none;
+  }
+   
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+   
+  h5 {
+    color: white;
+  }
+   
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: 1px solid #6c757d;
+  }
+   
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }

@@ -1,0 +1,19 @@
+﻿@inject IHttpContextAccessor HC
+@{
+  if (HC.HttpContext.Session.GetString("usertype") == null)
+    {
+        Layout = "_MyMasterPage1";
+        
+    }
+
+     else if (HC.HttpContext.Session.GetString("usertype").Equals("Admin"))
+        {
+        Layout = "AdminMaster";
+        }
+        else
+         {
+
+        Layout = "CustomerMaster";
+        } 
+    
+}

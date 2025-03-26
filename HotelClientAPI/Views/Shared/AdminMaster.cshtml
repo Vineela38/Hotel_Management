@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="~/css/MyStyles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="text-center flex-grow-1">
+                <h1 class="mb-0">
+                    <span class="text-burlywood">-</span>
+                    <span class="text-red">ORBITZ</span>
+                    <span class="text-black">Booking</span>
+                </h1>
+            </div>
+        </div>
+        <div class="text-left mt-3">
+            <a href="/HotelClient/insert" class="btn btn-primary me-2">Add Hotel</a>
+            <a href="/HotelClient/Update" class="btn btn-primary me-2">Edit Hotel Details</a>
+            <a href="/HotelClient/Delete" class="btn btn-primary me-2">Remove Hotel Details</a>
+            <a href="/Client/Logout" class="btn btn-light me-2">LOGOUT</a>
+        </div>
+    </header>
+
+    <main class="container-fluid my-4 content-container">
+        <div class="fixed-image-container">
+            <img src="https://cdn.pixabay.com/photo/2017/08/06/14/56/people-2593251_1280.jpg" alt="Background Image">
+        </div>
+        @* <div class="content-container"> *@
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="image-scroll-container">
+                       
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0 d-flex align-items-center justify-content-center">
+                    <div class="Forms">
+                      
+                        @RenderBody()
+                    </div>
+                @* </div> *@
+            </div>
+        </div>
+    </main>
+</body>
+</html>

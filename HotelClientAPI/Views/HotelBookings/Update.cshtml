@@ -1,0 +1,185 @@
+@model HotelClientAPI.Models.Entities.HotelBooking
+ 
+<script>
+    function fetch() {
+        var h = document.getElementById("bookingId").value;
+        window.location.href = "/HotelBookings/fetch/" + h;
+    }
+ 
+    function calculatenodays() {
+        var arrivalDate = new Date(document.getElementById("arrivalDate").value);
+        var departureDate = new Date(document.getElementById("departureDate").value);
+        var today = new Date();
+ 
+        if (arrivalDate < today) {
+            alert("Arrival date must be on or after the current date.");
+            document.getElementById("arrivalDate").value = "";
+            return;
+        }
+ 
+        if (departureDate <= arrivalDate) {
+            alert("Departure date must be after the arrival date.");
+            document.getElementById("departureDate").value = "";
+            return;
+        }
+ 
+        var noOfDays = Math.ceil((departureDate - arrivalDate) / (1000 * 60 * 60 * 24));
+        if (noOfDays > 7) {
+            alert("The maximum stay duration is 7 nights.");
+            document.getElementById("departureDate").value = "";
+            return;
+        }
+ 
+        document.getElementById("noOfDays").value = noOfDays;
+    }
+</script>
+@using (Html.BeginForm("Update", "HotelBookings"))
+{
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+ 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+ 
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+ 
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+ 
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+ 
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+ 
+        td input[type="button"],
+        td input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+ 
+        td input[type="button"]:hover,
+        td input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+ 
+        td input[type="text"],
+        td select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+ 
+        #Payment {
+            background-color: #e2f1f8;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+ 
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+ 
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+ 
+ 
+    <table class="table table-dark table-striped">
+        <tr>
+         <td>Booking ID</td>
+        <td>
+            @Html.DropDownListFor(p=>p.bookingId,new SelectList(ViewBag.bookinghotels,"bookingId","bookingId"),"Select",new{onblur="fetch()", @class = "form-control"})</td>  
+        </tr>
+ 
+ 
+        <tr>
+            <td>Hotel ID</td>
+            <td>@Html.TextBoxFor(p => p.hotelId, new { @class = "form-control" })</td>
+        </tr>
+        <tr>
+            <td>Email ID</td>
+            <td>@Html.TextBoxFor(p => p.emailID, new { @class = "form-control" })</td>
+        </tr>
+        <tr>
+            <td>Booking Date</td>
+            <td>@Html.TextBoxFor(p => p.bookingDate, "{0:yyyy-MM-dd}", new { type = "date", @class = "form-control" })</td>
+        </tr>
+        <tr>
+            <td>Arrival Date</td>
+            <td>@Html.TextBoxFor(p => p.arrivalDate, "{0:yyyy-MM-dd}", new
+                    {
+                        type = "date",
+                        id = "arrivalDate",
+                        @onchange = "calculatenodays()",
+                        @class="form-control"
+ 
+                    })</td>
+        </tr>
+        <tr>
+            <td>Departure Date</td>
+            <td>@Html.TextBoxFor(p => p.departureDate,"{0:yyyy-MM-dd}", new
+                    {
+                        type = "date",
+                        id = "departureDate",
+                        @onchange = "calculatenodays()",
+                        @class="form-control"
+ 
+                       
+                    })</td>
+        </tr>
+        <tr>
+            <td>No of Adults</td>
+            <td>@Html.TextBoxFor(p => p.noOfAdults, new { id = "noOfAdults" ,  @class="form-control"})</td>
+        </tr>
+        <tr>
+            <td>No of Children</td>
+            <td>@Html.TextBoxFor(p => p.noOfchild, new { id = "noOfChildren",  @class="form-control" })</td>
+        </tr>
+        <tr>
+            <td>No of Days</td>
+            <td>@Html.TextBoxFor(p => p.noOfDays, new { id = "noOfDays", @readonly = "readonly",  @class="form-control" })</td>
+        </tr>
+ 
+        <tr>
+            <td><input type="submit" value="Update" /></td>
+        </tr>
+    </table>
+ 
+    @if (ViewBag.msg != null)
+    {
+        <div style="color: rgb(38, 18, 216);">@ViewBag.msg</div>
+    }
+}
+
+

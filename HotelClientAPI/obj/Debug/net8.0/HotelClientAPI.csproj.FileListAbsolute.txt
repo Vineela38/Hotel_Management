@@ -1,0 +1,99 @@
+C:\Csharp\HotelClientAPI\bin\Debug\net8.0\appsettings.Development.json
+C:\Csharp\HotelClientAPI\bin\Debug\net8.0\appsettings.json
+C:\Csharp\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.staticwebassets.runtime.json
+C:\Csharp\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.exe
+C:\Csharp\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.deps.json
+C:\Csharp\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.runtimeconfig.json
+C:\Csharp\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.dll
+C:\Csharp\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.pdb
+C:\Csharp\HotelClientAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.csproj.AssemblyReference.cache
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.AssemblyInfoInputs.cache
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.AssemblyInfo.cs
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.csproj.CoreCompileInputs.cache
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.RazorAssemblyInfo.cache
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.RazorAssemblyInfo.cs
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\staticwebassets.build.json
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\staticwebassets.development.json
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.HotelClientAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.HotelClientAPI.props
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.HotelClientAPI.props
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.HotelClientAPI.props
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\scopedcss\bundle\HotelClientAPI.styles.css
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\scopedcss\projectbundle\HotelClientAPI.bundle.scp.css
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelCli.111EE1ED.Up2Date
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.dll
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\refint\HotelClientAPI.dll
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.pdb
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.genruntimeconfig.cache
+C:\Csharp\HotelClientAPI\obj\Debug\net8.0\ref\HotelClientAPI.dll
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\bin\Debug\net8.0\appsettings.json
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.staticwebassets.runtime.json
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.exe
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.deps.json
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.runtimeconfig.json
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.dll
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.pdb
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.csproj.AssemblyReference.cache
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.AssemblyInfoInputs.cache
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.AssemblyInfo.cs
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.csproj.CoreCompileInputs.cache
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.RazorAssemblyInfo.cache
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.RazorAssemblyInfo.cs
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.HotelClientAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.HotelClientAPI.props
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.HotelClientAPI.props
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.HotelClientAPI.props
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\scopedcss\bundle\HotelClientAPI.styles.css
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\scopedcss\projectbundle\HotelClientAPI.bundle.scp.css
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelCli.111EE1ED.Up2Date
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.dll
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\refint\HotelClientAPI.dll
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.pdb
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.genruntimeconfig.cache
+C:\Users\arisa\Downloads\Vineela\HotelClientAPI 1\HotelClientAPI\obj\Debug\net8.0\ref\HotelClientAPI.dll
+C:\Project\HotelClientAPI\bin\Debug\net8.0\appsettings.Development.json
+C:\Project\HotelClientAPI\bin\Debug\net8.0\appsettings.json
+C:\Project\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.staticwebassets.runtime.json
+C:\Project\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.exe
+C:\Project\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.deps.json
+C:\Project\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.runtimeconfig.json
+C:\Project\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.dll
+C:\Project\HotelClientAPI\bin\Debug\net8.0\HotelClientAPI.pdb
+C:\Project\HotelClientAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.csproj.AssemblyReference.cache
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.AssemblyInfoInputs.cache
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.AssemblyInfo.cs
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.csproj.CoreCompileInputs.cache
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.RazorAssemblyInfo.cache
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.RazorAssemblyInfo.cs
+C:\Project\HotelClientAPI\obj\Debug\net8.0\staticwebassets.build.json
+C:\Project\HotelClientAPI\obj\Debug\net8.0\staticwebassets.development.json
+C:\Project\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.HotelClientAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Project\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.HotelClientAPI.props
+C:\Project\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.HotelClientAPI.props
+C:\Project\HotelClientAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.HotelClientAPI.props
+C:\Project\HotelClientAPI\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Project\HotelClientAPI\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Project\HotelClientAPI\obj\Debug\net8.0\scopedcss\bundle\HotelClientAPI.styles.css
+C:\Project\HotelClientAPI\obj\Debug\net8.0\scopedcss\projectbundle\HotelClientAPI.bundle.scp.css
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelCli.111EE1ED.Up2Date
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.dll
+C:\Project\HotelClientAPI\obj\Debug\net8.0\refint\HotelClientAPI.dll
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.pdb
+C:\Project\HotelClientAPI\obj\Debug\net8.0\HotelClientAPI.genruntimeconfig.cache
+C:\Project\HotelClientAPI\obj\Debug\net8.0\ref\HotelClientAPI.dll

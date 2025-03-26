@@ -1,0 +1,151 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HotelClientAPI
+build_property.RootNamespace = HotelClientAPI
+build_property.ProjectDir = C:\Project\HotelClientAPI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Project\HotelClientAPI
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Project/HotelClientAPI/Views/Client/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Client/customer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XGN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Client/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Client/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Client/Signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XFNpZ251cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Home/Highlights.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaWdobGlnaHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelBookings/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxCb29raW5nc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelBookings/getall.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxCb29raW5nc1xnZXRhbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelBookings/GetByCity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxCb29raW5nc1xHZXRCeUNpdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelBookings/Insert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxCb29raW5nc1xJbnNlcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelBookings/InsertDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxCb29raW5nc1xJbnNlcnREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelBookings/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxCb29raW5nc1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelClient/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxDbGllbnRcQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelClient/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxDbGllbnRcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelClient/getall.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxDbGllbnRcZ2V0YWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelClient/insertHotel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxDbGllbnRcaW5zZXJ0SG90ZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/HotelClient/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxDbGllbnRcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/PaymentClients/Insert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudENsaWVudHNcSW5zZXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Shared/AdminMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluTWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Shared/CustomerMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEN1c3RvbWVyTWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Shared/MyMasterpage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE15TWFzdGVycGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Shared/_MyMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeU1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Shared/_MyMasterPage1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeU1hc3RlclBhZ2UxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/HotelClientAPI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1a4zvrob0l
